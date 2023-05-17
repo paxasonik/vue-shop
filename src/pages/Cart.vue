@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import CartProduct from "@/components/Cart/CartProduct.vue";
+import Product from "@/components/Cart/Product.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 </script>
 
 <template>
   <main class="content container">
     <div class="content__top">
-      <breadcrumbs/>
+      <Breadcrumbs/>
 
       <h1 class="content__title">
         Корзина
@@ -18,7 +18,7 @@ import Breadcrumbs from "@/components/Breadcrumbs.vue";
       <form class="cart__form form" action="#" method="POST">
         <div class="cart__field">
           <ul class="cart__list">
-            <cart-product/>
+            <Product/>
           </ul>
         </div>
 

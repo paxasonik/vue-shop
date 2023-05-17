@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CatalogFilter from "@/components/Catalog/CatalogFilter.vue";
-import CatalogItem from "@/components/Catalog/CatalogItem.vue";
-import CatalogPagination from "@/components/Catalog/CatalogPagination.vue";
+import Filter from "@/components/Catalog/Filter.vue";
+import Product from "@/components/Catalog/Product.vue";
+import Pagination from "@/components/Catalog/Pagination.vue";
 </script>
 
 <template>
@@ -14,13 +14,13 @@ import CatalogPagination from "@/components/Catalog/CatalogPagination.vue";
         </div>
 
         <div class="content__catalog">
-            <catalog-filter/>
+            <Filter/>
 
             <section class="catalog">
                 <ul class="catalog__list">
-                    <catalog-item/>
+                    <Product/>
                 </ul>
-                <catalog-pagination/>
+                <Pagination/>
             </section>
         </div>
     </main>

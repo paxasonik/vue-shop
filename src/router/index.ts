@@ -1,41 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // @ts-ignore
-import AppLayout from '@/layouts/AppLayout.vue';
+import Main from '@/layouts/Main.vue';
 // @ts-ignore
-import CatalogPage from '@/pages/CatalogPage.vue';
+import Catalog from '@/pages/Catalog.vue';
 // @ts-ignore
-import OrderPage from "@/pages/OrderPage.vue";
+import Order from "@/pages/Order.vue";
 // @ts-ignore
-import CartPage from "@/pages/CartPage.vue";
+import Cart from "@/pages/Cart.vue";
 // @ts-ignore
-import SentPage from "@/pages/SentPage.vue";
+import Sent from "@/pages/Sent.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: AppLayout,
+      component: Main,
       children: [
         {
           path: '/',
           name: 'catalog',
-          component: CatalogPage,
+          component: Catalog,
         },
         {
           path: '/order',
           name: 'order',
-          component: OrderPage,
+          component: Order,
         },
         {
           path: '/cart',
           name: 'cart',
-          component: CartPage,
+          component: Cart,
         },
         {
           path: '/sent',
           name: 'sent',
-          component: SentPage,
+          component: Sent,
         },
       ]
     }

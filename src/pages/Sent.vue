@@ -1,12 +1,11 @@
 <script setup lang="ts">
-
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 </script>
 
 <template>
   <main class="content container">
     <div class="content__top">
-      <breadcrumbs/>
+      <Breadcrumbs/>
 
       <h1 class="content__title">
         Заказ оформлен <span>№ 23621</span>
