@@ -1,0 +1,22 @@
+.dictionary {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+.dictionary__item {
+  display: grid;
+  grid-template-columns:170px 1fr;
+  grid-gap: 20px;
+  font-size: 16px;
+  line-height: 24px
+}
+
+.dictionary__item:not(:last-child) {
+  margin-bottom: 30px
+}
+
+.dictionary__key {
+  opacity: .6;
+  font-weight: 300
+}

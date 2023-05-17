@@ -119,9 +119,12 @@
             <p>Итого: <b>3</b> товара на сумму <b>37 970 ₽</b></p>
           </div>
 
-          <button class="cart__button button button--primery" type="submit">
-            Оформить заказ
-          </button>
+<!--          <button class="cart__button button button--primery" type="submit">-->
+<!--            Оформить заказ-->
+<!--          </button>-->
+            <router-link :to="{ name: 'sent' }" class="cart__button button button--primery">
+              Оформить заказ
+            </router-link>
         </div>
         <div class="cart__error form__error-block">
           <h4>Заявка не отправлена!</h4>
