@@ -1,38 +1,30 @@
 <script setup lang="ts">
+import Color from "@/components/Catalog/Color.vue";
+import { ProductProps } from "./Types/product"
+import Counter from "@/components/Counter.vue";
 
+const props = defineProps<ProductProps>();
 </script>
 
 <template>
   <li class="catalog__item">
-    <a class="catalog__pic" href="#">
-      <img src="@/assets/images/catalog/radio.jpg" srcset="@/assets/images/catalog/radio@2x.jpg 2x" alt="Название товара">
-    </a>
-
+    <img :src="props.product.imageUrl" alt="Название товара" class="catalog__pic">
     <h3 class="catalog__title">
-      <a href="#">Радионяня Motorola MBP16</a>
+      {{ props.product.title }}
     </h3>
 
-    <span class="catalog__price">3 690 ₽</span>
+    <span class="catalog__price">{{ props.product.price }} ₽</span>
 
+      {{}}
     <ul class="colors colors--black">
-      <li class="colors__item">
-        <label class="colors__label">
-          <input class="colors__radio sr-only" type="radio" name="color-1" value="#73B6EA" checked="">
-          <span class="colors__value" style="background-color: #73B6EA;"></span>
-        </label>
-      </li>
-      <li class="colors__item">
-        <label class="colors__label">
-          <input class="colors__radio sr-only" type="radio" name="color-1" value="#8BE000">
-          <span class="colors__value" style="background-color: #8BE000;"></span>
-        </label>
-      </li>
-      <li class="colors__item">
-        <label class="colors__label">
-          <input class="colors__radio sr-only" type="radio" name="color-1" value="#222">
-          <span class="colors__value" style="background-color: #222;"></span>
-        </label>
-      </li>
+      <Color v-for="color in props.product.colors" :key="color.id" :color="color" :productId="props.product.id" />
     </ul>
+      <div class="catalog__row">
+        <Counter class="catalog__counter"/>
+
+        <button class="button button--primery" type="submit">
+          <img src="@/assets/images/svg/header/cart.svg" alt="Корзина с товарами" width="30" height="21">
+        </button>
+      </div>
   </li>
 </template>
