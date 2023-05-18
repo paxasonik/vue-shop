@@ -1,0 +1,362 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Детский трюковой самокат Razor Grom",
+      "imageUrl": "/src/assets/images/catalog/detskiy-tryukovoy-samokat-razor-grom.jpg",
+      "price": 4990,
+      "colors": [
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        },
+        {
+          "id": 4,
+          "title": "Зелёный",
+          "code": "#8be000"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Электросамокат Xiaomi MiJia Electric Scooter Pro",
+      "imageUrl": "/src/assets/images/catalog/elektrosamokat-xiaomi-mijia-electric-scooter-pro.jpg",
+      "price": 44999,
+      "colors": [
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        },
+        {
+          "id": 8,
+          "title": "Красный",
+          "code": "#e60039"
+        },
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Электросамокат NineBot ES1",
+      "imageUrl": "/src/assets/images/catalog/elektrosamokat-ninebot-es1.jpg",
+      "price": 27999,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        },
+        {
+          "id": 8,
+          "title": "Красный",
+          "code": "#e60039"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Самокат Ridex Marvel 2.0 R",
+      "imageUrl": "/src/assets/images/catalog/samokat-ridex-marvel-2-0-r.jpg",
+      "price": 5450,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        },
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Радионяня Motorola MBP160",
+      "imageUrl": "/src/assets/images/catalog/radionyanya-motorola-mbp160.jpg",
+      "price": 3690,
+      "colors": [
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        },
+        {
+          "id": 9,
+          "title": "Белый",
+          "code": "#fafafa"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Ультразвуковая зубная щётка Playbrush Smart Sonic",
+      "imageUrl": "/src/assets/images/catalog/ultrazvukovaya-zubnaya-shchetka-playbrush-smart-sonic.jpg",
+      "price": 5660,
+      "colors": [
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        },
+        {
+          "id": 8,
+          "title": "Красный",
+          "code": "#e60039"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Смартфон Xiaomi Mi A3 4/64GB Android One",
+      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-mi-a3-4-64gb-android-one.png",
+      "price": 14960,
+      "colors": [
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        },
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Смартфон Xiaomi Redmi 6/128GB",
+      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-redmi-6-128gb.jpg",
+      "price": 8960,
+      "colors": [
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        },
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Гироскутер Razor Hovertrax 2.0",
+      "imageUrl": "/src/assets/images/catalog/giroskuter-razor-hovertrax-2-0.jpg",
+      "price": 3490,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Электроскейт Razor Cruiser",
+      "imageUrl": "/src/assets/images/catalog/elektroskeyt-razor-cruiser.jpg",
+      "price": 24690,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        },
+        {
+          "id": 2,
+          "title": "Желтый",
+          "code": "#ffbe15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Роллерсёрф Razor RipStik Air Pro",
+      "imageUrl": "/src/assets/images/catalog/rollerserf-razor-ripstik-air-pro.jpg",
+      "price": 6690,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        },
+        {
+          "id": 1,
+          "title": "Фиолетовый",
+          "code": "#9200e0"
+        },
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        },
+        {
+          "id": 2,
+          "title": "Желтый",
+          "code": "#ffbe15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Наушники AirPods 2",
+      "imageUrl": "/src/assets/images/catalog/naushniki-airpods-2.jpg",
+      "price": 16560,
+      "colors": [
+        {
+          "id": 9,
+          "title": "Белый",
+          "code": "#fafafa"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Смартфон Xiaomi Mi Mix 3 6/128GB",
+      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-mi-mix-3-6-128gb.jpg",
+      "price": 21790,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Часы Apple Watch Series 5",
+      "imageUrl": "/src/assets/images/catalog/chasy-apple-watch-series-5.jpg",
+      "price": 33990,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Фитнес браслет Xiaomi Mi Band 4 NFC",
+      "imageUrl": "/src/assets/images/catalog/fitnes-braslet-xiaomi-mi-band-4-nfc.jpg",
+      "price": 3990,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Наушники Marshall Major II",
+      "imageUrl": "/src/assets/images/catalog/naushniki-marshall-major-ii.jpg",
+      "price": 4990,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Наушники JBL TUNE 220TWS",
+      "imageUrl": "/src/assets/images/catalog/naushniki-jbl-tune-220tws.jpg",
+      "price": 5990,
+      "colors": [
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        },
+        {
+          "id": 5,
+          "title": "Синий",
+          "code": "#73b6ea"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Электровелосипед Eltreco TT Max",
+      "imageUrl": "/src/assets/images/catalog/elektrovelosiped-eltreco-tt-max.jpg",
+      "price": 88920,
+      "colors": [
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Квадрокоптер DJI Spark Fly More Combo",
+      "imageUrl": "/src/assets/images/catalog/kvadrokopter-dji-spark-fly-more-combo.jpg",
+      "price": 38385,
+      "colors": [
+        {
+          "id": 9,
+          "title": "Белый",
+          "code": "#fafafa"
+        },
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        },
+        {
+          "id": 3,
+          "title": "Чёрный",
+          "code": "#000000"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Квадрокоптер Xiaomi Mi Drone Mini",
+      "imageUrl": "/src/assets/images/catalog/kvadrokopter-xiaomi-mi-drone-mini.jpg",
+      "price": 5990,
+      "colors": [
+        {
+          "id": 9,
+          "title": "Белый",
+          "code": "#fafafa"
+        },
+        {
+          "id": 8,
+          "title": "Красный",
+          "code": "#e60039"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Квадрокоптер DJI Mavic 2 Zoom",
+      "imageUrl": "/src/assets/images/catalog/kvadrokopter-dji-mavic-2-zoom.jpg",
+      "price": 111990,
+      "colors": [
+        {
+          "id": 6,
+          "title": "Серый",
+          "code": "#939393"
+        }
+      ]
+    }
+  ]
+}
