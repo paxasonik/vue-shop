@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeMount, onBeforeUnmount } from "vue";
+import { ref, computed, onBeforeMount, onBeforeUnmount, watch } from "vue";
 import Filter from "@/components/Catalog/Filter.vue";
 import Product from "@/components/Catalog/Product.vue";
 import Pagination from "@/components/Catalog/Pagination.vue";
@@ -39,6 +39,10 @@ const filterProducts = computed(() => {
 const products = computed(() => {
   const offset = (page.value - 1) * productsPerPage;
   return filterProducts.value.slice(offset, offset + productsPerPage)
+});
+
+watch(() => [filterStore.priceFrom, filterStore.priceTo, filterStore.categoryId, filterStore.colorId], ( newValue ) => {
+  page.value = pageOne;
 });
 
 onBeforeMount(() => {
