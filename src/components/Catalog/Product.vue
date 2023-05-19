@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import Color from "@/components/Catalog/Color.vue";
-import { ProductProps } from "@/components/Catalog/Types/product"
 import Counter from "@/components/Counter.vue";
+import { ProductProps } from "@/components/Catalog/Types/product"
 
 const props = defineProps<ProductProps>();
+
+const colorId = ref('');
 </script>
 
 <template>
@@ -17,7 +20,7 @@ const props = defineProps<ProductProps>();
 
       {{}}
     <ul class="colors colors--black">
-      <Color v-for="color in props.product.colors" :key="color.id" :color="color" :productId="props.product.id" />
+      <Color v-for="color in props.product.colors" :key="color.id" :color="color" :name="'color-' + props.product.id" v-model.number="colorId"/>
     </ul>
       <div class="catalog__row">
         <Counter class="catalog__counter"/>

@@ -13,6 +13,7 @@ interface Emit {
 }
 
 const Emit :Emit = {
+  UPDATE_VALUE: 'update:modelValue',
   UPDATE_PAGE: 'update:page',
 };
 

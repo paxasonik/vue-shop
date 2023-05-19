@@ -1,0 +1,26 @@
+<script setup lang="ts">
+import { SelectProps, SelectEmit } from "@/components/UI/type";
+import { Emit } from "@/utils/constants";
+
+const props = defineProps<SelectProps>();
+const emit = defineEmits<SelectEmit>();
+const changeOption = (event) =>  {
+  emit(Emit.UPDATE_VALUE, event.target.value)
+}
+</script>
+
+<template>
+  <label class="form__label">
+    <select class="form__select" :name="props.name" :value="props.modelValue" @change="changeOption">
+      <option disabled :value="0">Выберите из списка</option>
+      <option
+        v-for="option in props.options"
+        :key="option.id"
+        :value="option.id"
+      >
+        {{ option.title }}
+      </option>
+    </select>
+  </label>
+
+</template>
