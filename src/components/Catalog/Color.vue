@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ColorProps } from "./Types/color"
+import { ColorProps } from "@/components/Catalog/Types/color"
 
 const props = defineProps<ColorProps>();
 </script>

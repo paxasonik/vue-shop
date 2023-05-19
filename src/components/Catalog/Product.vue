@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Color from "@/components/Catalog/Color.vue";
-import { ProductProps } from "./Types/product"
+import { ProductProps } from "@/components/Catalog/Types/product"
 import Counter from "@/components/Counter.vue";
 
 const props = defineProps<ProductProps>();
