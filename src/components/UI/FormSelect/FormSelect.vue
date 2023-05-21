@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SelectProps, SelectEmit } from "@/components/UI/type";
+import { SelectProps, SelectEmit } from "@/components/UI/FormSelect";
 import { Emit } from "@/utils/constants";
 
 const props = defineProps<SelectProps>();

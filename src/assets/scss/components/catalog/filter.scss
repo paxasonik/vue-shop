@@ -131,36 +131,39 @@
   display: flex;
   width: 150px;
   height: 70px;
-  background-color: #fff
-}
+  background-color: #fff;
 
-.form__counter button, .form__counter input {
-  height: 70px;
-  background-color: transparent;
-  border: 0;
-  font: inherit
-}
+  button, input {
+    height: 70px;
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+  }
 
-.form__counter button {
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-  display: block;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 40px
-}
+  button {
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 40px;
 
-.form__counter input {
-  padding: 23px 5px;
-  width: 70px;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #222;
-  font-size: 24px;
-  line-height: 1;
-  text-align: center
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  input {
+    padding: 23px 5px;
+    width: 70px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #222;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center
+  }
 }
 
 .form__error {

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useCartStore } from "@/stores/cart";
+
+const cartStore = useCartStore();
 </script>
 
 <template>
@@ -18,7 +21,7 @@
 
       <router-link :to="{ name: 'cart' }" class="header__cart">
         <img src="@/assets/images/svg/header/cart.svg" alt="Корзина с товарами">
-        <span class="header__count">3</span>
+        <span class="header__count">{{ cartStore.productsLength }}</span>
       </router-link>
     </div>
   </header>

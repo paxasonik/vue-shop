@@ -1,3 +1,23 @@
+.cart__data {
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-gap: 5px 30px;
+  padding-bottom: 25px;
+  margin-bottom: 15px
+}
+
+.cart__data label:not(:nth-child(4)):not(:nth-child(3)) {
+  grid-column: 1/-1
+}
+
+.cart__title {
+  margin: 0 0 20px;
+  font-family: "PressStart";
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase
+}
+
 .cart__options:not(:last-child) {
   margin-bottom: 40px
 }
@@ -78,6 +98,16 @@
   font-size: 14px;
   line-height: 1;
   color: #222
+}
+
+.options__value::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%
 }
 
 .options__value::before {

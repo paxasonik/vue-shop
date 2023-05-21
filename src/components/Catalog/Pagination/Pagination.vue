@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { PaginationProps, PaginationEmit } from "@/components/Catalog/Types/pagination";
+import { PaginationProps, PaginationEmit } from "@/components/Catalog/Pagination";
 import { Emit, paginationDisabledClass, paginationCurrentClass, pageOne } from "@/utils/constants"
 
 const props = defineProps<PaginationProps>();
@@ -41,7 +41,7 @@ const nextPage = (page: number) => {
         :class="{ [paginationDisabledClass]: props.page === pageOne }"
         @click.prevent="prevPage(props.page)"
       >
-        <img src="@/assets/images/svg/catalog/icon-arrow-left.svg" alt="Предыдущая страница">
+        <img src="../../../assets/images/svg/catalog/icon-arrow-left.svg" alt="Предыдущая страница">
       </a>
     </li>
     <li class="pagination__item" v-for="pageNumber in pages" :key="pageNumber">
@@ -61,7 +61,7 @@ const nextPage = (page: number) => {
         :class="{ [paginationDisabledClass]: props.page === totalPages }"
         @click.prevent="nextPage(props.page)"
       >
-        <img src="@/assets/images/svg/catalog/icon-arrow-right.svg" alt="Следующая страница">
+        <img src="../../../assets/images/svg/catalog/icon-arrow-right.svg" alt="Следующая страница">
       </a>
     </li>
   </ul>

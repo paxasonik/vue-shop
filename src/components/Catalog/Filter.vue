@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import Color from "@/components/Catalog/Color.vue";
-import FormInput from "@/components/UI/FormInput.vue";
-import FormSelect from "@/components/UI/FormSelect.vue";
+import Color from "@/components/Catalog/Color/Color.vue";
+import FormInput from "@/components/UI/FormInput/FormInput.vue";
+import FormSelect from "@/components/UI/FormSelect/FormSelect.vue";
 import { useFilterStore } from "@/stores/filter";
 
 const filterStore = useFilterStore();

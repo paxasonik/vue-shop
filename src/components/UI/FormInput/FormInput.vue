@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { InputProps, InputEmit } from "@/components/UI/type";
+import { InputProps, InputEmit } from "@/components/UI/FormInput";
 import { Emit } from "@/utils/constants";
 import { vMaska } from 'maska';
 
