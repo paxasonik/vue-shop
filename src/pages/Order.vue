@@ -1,5 +1,46 @@
 <script setup lang="ts">
+import { ref, watch } from "vue";
+import { useRouter } from "vue-router";
 import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
+import FormInput from "@/components/UI/FormInput/FormInput.vue";
+import { declOfNum } from "@/utils/helper";
+import { declOfProduct } from "@/utils/constants";
+import { useOrderStore } from "@/stores/order";
+import { useCartStore } from "@/stores/cart";
+
+const orderStore = useOrderStore();
+const cartStore = useCartStore();
+const router = useRouter();
+
+const isChangedForm = ref(false);
+const form = ref({
+  name: '',
+  address: '',
+  phone: '',
+  email: '',
+  comments: '',
+  delivery: 0,
+  pay: '',
+});
+
+const submit = () => {
+  orderStore.form = form.value;
+  orderStore.products = cartStore.products;
+  orderStore.productsLength = cartStore.productsLength;
+  orderStore.totalPrice = cartStore.totalPrice;
+  cartStore.products = [];
+  router.push({ name: 'sent'});
+}
+
+watch(() => form.value, (newVal, oldVal) => {
+  isChangedForm.value = newVal.name !== '' &&
+    newVal.address !== '' &&
+    newVal.phone !== '' &&
+    newVal.email !== '' &&
+    newVal.pay !== '' &&
+    true
+}, { deep: true });
+
 </script>
 
 <template>
@@ -10,36 +51,57 @@ import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
       <h1 class="content__title">
         Корзина
       </h1>
-      <span class="content__info">3 товара</span>
+      <span class="content__info">
+          {{ cartStore.productsLength + ' ' + declOfNum( cartStore.productsLength, declOfProduct ) }}
+      </span>
     </div>
 
     <section class="cart">
-      <form class="cart__form form" action="#" method="POST">
+      <form class="cart__form form">
         <div class="cart__field">
           <div class="cart__data">
-            <label class="form__label">
-              <input class="form__input" type="text" name="name" placeholder="Введите ваше полное имя">
-              <span class="form__value">ФИО</span>
-            </label>
+            <Form-input
+              name="name"
+              placeholder="Введите ваше полное имя"
+              label="ФИО"
+              type="text"
+              v-model="form.name"
+              data-maska="X"
+              data-maska-tokens="X:[а-яёА-ЯЁ\s-]:multiple"
+            />
+
+            <Form-input
+              name="address"
+              placeholder="Введите ваш адрес"
+              label="Адрес доставки"
+              type="text"
+              v-model="form.address"
+              data-maska="X"
+              data-maska-tokens='X:[0-9а-яёА-ЯЁ\s.-\/",]:multiple'
+            />
+
+            <Form-input
+              name="phone"
+              placeholder="Введите ваш телефон"
+              label="Телефон"
+              type="tel"
+              v-model="form.phone"
+              data-maska="+7 (X##) ###-##-##"
+              data-maska-tokens="X:[489]"
+            />
+
+            <Form-input
+              name="email"
+              placeholder="Введи ваш Email"
+              label="Email"
+              type="email"
+              v-model="form.email"
+              data-maska="X@X.X"
+              data-maska-tokens="X:[0-9a-zA-Z.-_@]:multiple"
+            />
 
             <label class="form__label">
-              <input class="form__input" type="text" name="address" placeholder="Введите ваш адрес">
-              <span class="form__value">Адрес доставки</span>
-            </label>
-
-            <label class="form__label">
-              <input class="form__input" type="tel" name="phone" placeholder="Введите ваш телефон">
-              <span class="form__value">Телефон</span>
-              <span class="form__error">Неверный формат телефона</span>
-            </label>
-
-            <label class="form__label">
-              <input class="form__input" type="email" name="email" placeholder="Введи ваш Email">
-              <span class="form__value">Email</span>
-            </label>
-
-            <label class="form__label">
-              <textarea class="form__input form__input--area" name="comments" placeholder="Ваши пожелания"></textarea>
+              <textarea class="form__input form__input--area" name="comments" placeholder="Ваши пожелания" v-model="form.comments"></textarea>
               <span class="form__value">Комментарий к заказу</span>
             </label>
           </div>
@@ -49,13 +111,13 @@ import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
             <ul class="cart__options options">
               <li class="options__item">
                 <label class="options__label">
-                  <input class="options__radio sr-only" type="radio" name="delivery" value="0" checked="">
+                  <input class="options__radio sr-only" type="radio" name="delivery" v-model.number="form.delivery" :value="0">
                   <span class="options__value">Самовывоз <b>бесплатно</b></span>
                 </label>
               </li>
               <li class="options__item">
                 <label class="options__label">
-                  <input class="options__radio sr-only" type="radio" name="delivery" value="500">
+                  <input class="options__radio sr-only" type="radio" name="delivery" v-model.number="form.delivery" :value="500">
                   <span class="options__value">Курьером <b>500 ₽</b></span>
                 </label>
               </li>
@@ -65,13 +127,13 @@ import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
             <ul class="cart__options options">
               <li class="options__item">
                 <label class="options__label">
-                  <input class="options__radio sr-only" type="radio" name="pay" value="card">
+                  <input class="options__radio sr-only" type="radio" name="pay" v-model="form.pay" value="card">
                   <span class="options__value">Картой при получении</span>
                 </label>
               </li>
               <li class="options__item">
                 <label class="options__label">
-                  <input class="options__radio sr-only" type="radio" name="pay" value="cash">
+                  <input class="options__radio sr-only" type="radio" name="pay" v-model="form.pay" value="cash">
                   <span class="options__value">Наличными при получении</span>
                 </label>
               </li>
@@ -81,40 +143,20 @@ import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
 
         <div class="cart__block">
           <ul class="cart__orders">
-            <li class="cart__order">
-              <h3>Смартфон Xiaomi Redmi Note 7 Pro 6/128GB</h3>
-              <b>18 990 ₽</b>
-              <span>Артикул: 150030</span>
-            </li>
-            <li class="cart__order">
-              <h3>Гироскутер Razor Hovertrax 2.0ii</h3>
-              <b>4 990 ₽</b>
-              <span>Артикул: 150030</span>
-            </li>
-            <li class="cart__order">
-              <h3>Электрический дрифт-карт Razor Lil’ Crazy</h3>
-              <b>8 990 ₽</b>
-              <span>Артикул: 150030</span>
+            <li class="cart__order" v-for="product in cartStore.products" :key="product.id">
+              <h3>{{ product.title }}</h3>
+              <b>{{ product.price }} ₽</b>
             </li>
           </ul>
 
           <div class="cart__total">
-            <p>Доставка: <b>500 ₽</b></p>
-            <p>Итого: <b>3</b> товара на сумму <b>37 970 ₽</b></p>
+            <p v-if="form.delivery === 500">Доставка: <b>500 ₽</b></p>
+            <p>Итого: <b>{{ cartStore.productsLength }}</b> товара на сумму <b>{{ form.delivery === 500 ? cartStore.totalPrice + form.delivery : cartStore.totalPrice }} ₽</b></p>
           </div>
 
-<!--          <button class="cart__button button button--primery" type="submit">-->
-<!--            Оформить заказ-->
-<!--          </button>-->
-            <router-link :to="{ name: 'sent' }" class="cart__button button button--primery">
-              Оформить заказ
-            </router-link>
-        </div>
-        <div class="cart__error form__error-block">
-          <h4>Заявка не отправлена!</h4>
-          <p>
-            Похоже произошла ошибка. Попробуйте отправить снова или перезагрузите страницу.
-          </p>
+          <button class="cart__button button button--primery" type="submit" @click.prevent="submit" :disabled="!isChangedForm">
+            Оформить заказ
+          </button>
         </div>
       </form>
     </section>
