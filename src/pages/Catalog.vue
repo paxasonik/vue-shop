@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
         <Pagination v-model:page="page" :count="filterProducts.length" :per-page="productsPerPage" :max-displayed-pages="maxDisplayedPages"/>
       </section>
       <div class="" v-else>
-        Товар не найдет
+        Товар не найден
       </div>
     </div>
   </main>

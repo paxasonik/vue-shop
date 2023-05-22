@@ -1,5 +1,6 @@
 import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
+import { callSuccess } from "@/utils/helper";
 
 export const useCartStore = defineStore('cart', () => {
   const products = ref<Array<Record<string, unknown> | null>>([]);
@@ -17,6 +18,7 @@ export const useCartStore = defineStore('cart', () => {
   };
   const deleteProduct = ( id: number, colorId: number ) => {
     products.value = products.value.filter(item => !(item.id === id && item.color.id === colorId));
+    callSuccess("Товар удален из корзины");
   };
 
   return {

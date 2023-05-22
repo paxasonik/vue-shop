@@ -41,7 +41,7 @@ watch(count, (newVal, oldVal) => {
     </b>
 
     <button class="product__del button-del" type="button" @click="cartStore.deleteProduct( props.product.id, props.product.color.id )">
-      <img src="../../../assets/images/svg/cart/icon-close.svg" alt="Удалить товар из корзины" width="20" height="20">
+      <img src="@/assets/images/svg/cart/icon-close.svg" alt="Удалить товар из корзины" width="20" height="20">
     </button>
   </li>
 </template>
