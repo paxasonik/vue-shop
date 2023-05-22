@@ -1,6 +1,6 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
-import axios from 'axios'
+import { ref } from 'vue';
+import { defineStore } from 'pinia';
+import axios from 'axios';
 
 export const useFilterStore = defineStore('filter', () => {
   const categories = ref<Array<Record<string, unknown> | null>>([]);

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
-import Color from "@/components/Catalog/Color/Color.vue";
+import Color from "@/components/UI/Color/Color.vue";
 import FormInput from "@/components/UI/FormInput/FormInput.vue";
 import FormSelect from "@/components/UI/FormSelect/FormSelect.vue";
 import { useFilterStore } from "@/stores/filter";
@@ -72,7 +72,14 @@ onBeforeMount(() => {
         <fieldset class="form__block">
           <legend class="form__legend">Цвет</legend>
             <ul class="colors">
-              <Color v-for="color in filterStore.colors" :key="color.id" :color="color" name="color-filter" v-model.number="currentColorId"/>
+              <Color
+                v-for="color in filterStore.colors"
+                :key="color.id"
+                :color="color"
+                name="color-filter"
+                :isChecked="currentColorId === color.id"
+                v-model.number="currentColorId"
+              />
             </ul>
         </fieldset>
 

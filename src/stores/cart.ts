@@ -1,5 +1,5 @@
-import { computed, ref } from 'vue'
-import { defineStore } from 'pinia'
+import { computed, ref } from 'vue';
+import { defineStore } from 'pinia';
 import { callSuccess } from "@/utils/helper";
 
 export const useCartStore = defineStore('cart', () => {

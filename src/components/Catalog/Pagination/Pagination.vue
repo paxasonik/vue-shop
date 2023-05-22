@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { PaginationProps, PaginationEmit } from "@/components/Catalog/Pagination";
-import { Emit, paginationDisabledClass, paginationCurrentClass, pageOne } from "@/utils/constants"
+import { Emit, paginationDisabledClass, paginationCurrentClass, pageOne } from "@/utils/constants";
 
 const props = defineProps<PaginationProps>();
 const emit = defineEmits<PaginationEmit>();

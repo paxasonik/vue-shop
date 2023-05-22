@@ -2,6 +2,7 @@ import { Emit } from "@/utils/constants";
 
 export interface ColorProps {
   name: string;
+  isChecked: boolean;
   color: {
     id: number;
     title: string;

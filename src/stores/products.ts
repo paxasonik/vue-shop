@@ -1,6 +1,6 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
-import axios from 'axios'
+import { ref, computed } from 'vue';
+import { defineStore } from 'pinia';
+import axios from 'axios';
 
 export const useProductsStore = defineStore('products', () => {
   const products = ref<Array<Record<string, unknown> | null>>([]);

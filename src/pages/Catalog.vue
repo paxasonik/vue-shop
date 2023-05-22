@@ -3,8 +3,8 @@ import { ref, computed, onBeforeMount, onBeforeUnmount, watch } from "vue";
 import Filter from "@/components/Catalog/Filter.vue";
 import Product from "@/components/Catalog/Product/Product.vue";
 import Pagination from "@/components/Catalog/Pagination/Pagination.vue";
-import { declOfNum } from "@/utils/helper"
-import { declOfProduct, pageOne, productsPerPage, maxDisplayedPages } from "@/utils/constants"
+import { declOfNum } from "@/utils/helper";
+import { declOfProduct, pageOne, productsPerPage, maxDisplayedPages } from "@/utils/constants";
 import { useProductsStore } from "@/stores/products";
 import { useFilterStore } from "@/stores/filter";
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Color from "@/components/Catalog/Color/Color.vue";
+import Color from "@/components/UI/Color/Color.vue";
 import Counter from "@/components/UI/Counter/Counter.vue";
 import { ProductProps } from "@/components/Catalog/Product";
 import { callError, callSuccess } from "@/utils/helper";
@@ -51,7 +51,14 @@ const addCart = () => {
     <span class="catalog__price">{{ props.product.price }} ₽</span>
 
     <ul class="colors colors--black">
-      <Color v-for="color in props.product.colors" :key="color.id" :color="color" :name="'color-' + props.product.id" v-model.number="colorId"/>
+      <Color
+        v-for="color in props.product.colors"
+        :key="color.id"
+        :color="color"
+        :name="'color-' + props.product.id"
+        :isChecked="colorId === color.id"
+        v-model.number="colorId"
+      />
     </ul>
       <div class="catalog__row">
         <Counter class="catalog__counter" v-model.number="count" :count="count"/>
