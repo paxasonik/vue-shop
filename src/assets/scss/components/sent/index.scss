@@ -1,22 +1,25 @@
-.dictionary {
-  margin: 0;
-  padding: 0;
-  list-style: none
-}
-
-.dictionary__item {
-  display: grid;
-  grid-template-columns:170px 1fr;
-  grid-gap: 20px;
+.cart__message {
+  margin: 0 0 50px;
   font-size: 16px;
-  line-height: 24px
+  line-height: 24px;
+  color: #000;
 }
 
-.dictionary__item:not(:last-child) {
-  margin-bottom: 30px
-}
+.dictionary {
+  .dictionary__item {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    grid-gap: 20px;
+    font-size: 16px;
+    line-height: 24px;
 
-.dictionary__key {
-  opacity: .6;
-  font-weight: 300
+    &:not(:last-child) {
+      margin-bottom: 30px
+    }
+
+    .dictionary__key {
+      opacity: .6;
+      font-weight: 300;
+    }
+  }
 }

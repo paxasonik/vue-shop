@@ -1,0 +1,100 @@
+.form__label {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  color: #737373
+}
+
+.form__label:not(:last-child) {
+  margin-bottom: 25px
+}
+
+.form__label--price::after {
+  content: '₽';
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 1;
+  color: #222
+}
+
+.form__value {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 1;
+  color: #737373;
+  font-weight: 300
+}
+
+.form__input {
+  padding: 28px 45px 13px 20px;
+  width: 100%;
+  height: 65px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid #cfcfcf;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  color: #222;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1
+}
+
+.form__input:focus, .form__input:hover {
+  outline: 0;
+  border-color: #272727
+}
+
+.form__input--area {
+  height: 140px;
+  resize: none
+}
+
+.form__select {
+  width: 100%;
+  height: 52px;
+  border-radius: 0;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 14px 35px 14px 18px;
+  color: #222;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1
+}
+
+.form__error {
+  position: absolute;
+  bottom: -17px;
+  left: 20px;
+  font-size: 11px;
+  line-height: 14px;
+  color: #ff4d00
+}
+
+.form__error-block {
+  padding: 25px 30px;
+  border: 3px solid #ff4d00;
+  border-radius: 1px
+}
+
+.form__error-block h4 {
+  margin: 0 0 4px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #ff4d00
+}
+
+.form__error-block p {
+  font-size: 13px;
+  color: #000
+}
