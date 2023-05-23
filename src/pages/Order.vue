@@ -7,6 +7,7 @@ import { declOfNum } from "@/utils/helper";
 import { declOfProduct } from "@/utils/constants";
 import { useOrderStore } from "@/stores/order";
 import { useCartStore } from "@/stores/cart";
+import ContentCart from "@/components/UI/ContentCart/ContentCart.vue";
 
 
 const orderStore = useOrderStore();
@@ -55,8 +56,8 @@ watch(() => form.value, (newVal, oldVal) => {
       </template>
     </Content-top>
 
-    <section class="cart">
-      <form class="cart__form form">
+    <Content-cart>
+      <template #content>
         <div class="cart__field">
           <div class="cart__data">
             <Form-input
@@ -139,25 +140,24 @@ watch(() => form.value, (newVal, oldVal) => {
             </ul>
           </div>
         </div>
+      </template>
+      <template #sidebar>
+        <ul class="cart__orders">
+          <li class="cart__order" v-for="product in cartStore.products" :key="product.id">
+            <h3>{{ product.title }}</h3>
+            <b>{{ product.price }} ₽</b>
+          </li>
+        </ul>
 
-        <div class="cart__block">
-          <ul class="cart__orders">
-            <li class="cart__order" v-for="product in cartStore.products" :key="product.id">
-              <h3>{{ product.title }}</h3>
-              <b>{{ product.price }} ₽</b>
-            </li>
-          </ul>
-
-          <div class="cart__total">
-            <p v-if="form.delivery === 500">Доставка: <b>500 ₽</b></p>
-            <p>Итого: <b>{{ cartStore.productsLength }}</b> товара на сумму <b>{{ form.delivery === 500 ? cartStore.totalPrice + form.delivery : cartStore.totalPrice }} ₽</b></p>
-          </div>
-
-          <button class="cart__button button button--primery" type="submit" @click.prevent="submit" :disabled="!isChangedForm">
-            Оформить заказ
-          </button>
+        <div class="cart__total">
+          <p v-if="form.delivery === 500">Доставка: <b>500 ₽</b></p>
+          <p>Итого: <b>{{ cartStore.productsLength }}</b> товара на сумму <b>{{ form.delivery === 500 ? cartStore.totalPrice + form.delivery : cartStore.totalPrice }} ₽</b></p>
         </div>
-      </form>
-    </section>
+
+        <button class="cart__button button button--primery" type="submit" @click.prevent="submit" :disabled="!isChangedForm">
+          Оформить заказ
+        </button>
+      </template>
+    </Content-cart>
   </main>
 </template>
