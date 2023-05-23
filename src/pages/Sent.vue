@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
+import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
 import { useOrderStore } from "@/stores/order";
 
 const orderStore = useOrderStore();
@@ -7,13 +7,11 @@ const orderStore = useOrderStore();
 
 <template>
   <main class="content container">
-    <div class="content__top">
-      <Breadcrumbs/>
-
-      <h1 class="content__title">
-        Заказ оформлен <span>№ 23621</span>
-      </h1>
-    </div>
+    <Content-top :is-breadcrumbs="true">
+      <template #title>
+          Заказ оформлен <span>№ 23621</span>
+      </template>
+    </Content-top>
 
     <section class="cart">
       <form class="cart__form form">

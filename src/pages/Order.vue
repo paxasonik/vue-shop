@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { useRouter } from "vue-router";
-import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
+import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
 import FormInput from "@/components/UI/FormInput/FormInput.vue";
 import { declOfNum } from "@/utils/helper";
 import { declOfProduct } from "@/utils/constants";
 import { useOrderStore } from "@/stores/order";
 import { useCartStore } from "@/stores/cart";
+
 
 const orderStore = useOrderStore();
 const cartStore = useCartStore();
@@ -45,16 +46,14 @@ watch(() => form.value, (newVal, oldVal) => {
 
 <template>
   <main class="content container">
-    <div class="content__top">
-      <Breadcrumbs/>
-
-      <h1 class="content__title">
+    <Content-top :is-breadcrumbs="true">
+      <template #title>
         Корзина
-      </h1>
-      <span class="content__info">
-          {{ cartStore.productsLength + ' ' + declOfNum( cartStore.productsLength, declOfProduct ) }}
-      </span>
-    </div>
+      </template>
+      <template #info>
+        {{ cartStore.productsLength + ' ' + declOfNum( cartStore.productsLength, declOfProduct ) }}
+      </template>
+    </Content-top>
 
     <section class="cart">
       <form class="cart__form form">

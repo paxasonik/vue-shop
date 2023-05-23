@@ -3,6 +3,7 @@ import { ref, computed, onBeforeMount, onBeforeUnmount, watch } from "vue";
 import Filter from "@/components/Catalog/Filter.vue";
 import Product from "@/components/Catalog/Product/Product.vue";
 import Pagination from "@/components/Catalog/Pagination/Pagination.vue";
+import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
 import { declOfNum } from "@/utils/helper";
 import { declOfProduct, pageOne, productsPerPage, maxDisplayedPages } from "@/utils/constants";
 import { useProductsStore } from "@/stores/products";
@@ -58,12 +59,14 @@ onBeforeUnmount(() => {
 
 <template>
   <main class="content container">
-    <div class="content__top content__top--catalog">
-        <h1 class="content__title">Каталог</h1>
-        <span class="content__info">
-          {{ filterProducts.length + ' ' + declOfNum( productsStore.productsLength, declOfProduct ) }}
-        </span>
-    </div>
+    <Content-top :is-breadcrumbs="false" class="content__top--catalog">
+      <template #title>
+        Каталог
+      </template>
+      <template #info>
+        {{ filterProducts.length + ' ' + declOfNum( productsStore.productsLength, declOfProduct ) }}
+      </template>
+    </Content-top>
 
     <div class="content__catalog">
       <Filter/>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watchEffect } from "vue";
-import type { CounterEmit, CounterProps } from "@/components/UI/Counter/type";
+import type { CounterEmit, CounterProps } from "@/components/UI/Counter";
 import { Emit } from "@/utils/constants";
 
 const props = defineProps<CounterProps>();

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Product from "@/components/Cart/Product/Product.vue";
-import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
+import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
 import { declOfNum } from "@/utils/helper";
 import { declOfProduct } from "@/utils/constants";
 import { useCartStore } from "@/stores/cart";
@@ -10,14 +10,14 @@ const cartStore = useCartStore();
 
 <template>
   <main class="content container">
-    <div class="content__top">
-      <Breadcrumbs/>
-
-      <h1 class="content__title">
+    <Content-top :is-breadcrumbs="true">
+      <template #title>
         Корзина
-      </h1>
-      <span class="content__info">{{ cartStore.productsLength + ' ' + declOfNum( cartStore.productsLength, declOfProduct ) }}</span>
-    </div>
+      </template>
+      <template #info>
+        {{ cartStore.productsLength + ' ' + declOfNum( cartStore.productsLength, declOfProduct ) }}
+      </template>
+    </Content-top>
 
     <section class="cart" v-if="cartStore.productsLength">
       <form class="cart__form form">
