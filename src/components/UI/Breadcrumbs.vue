@@ -23,5 +23,10 @@ const path = computed(() => route.name);
         Оформление заказа
       </router-link>
     </li>
+    <li class="breadcrumbs__item" v-if="path === 'sent'">
+      <router-link :to="{ name: 'sent' }" class="breadcrumbs__link">
+        Оформление заказа
+      </router-link>
+    </li>
   </ul>
 </template>

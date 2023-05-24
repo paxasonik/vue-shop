@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { onBeforeMount, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
 import FormInput from "@/components/UI/FormInput/FormInput.vue";
+import ContentCart from "@/components/UI/ContentCart/ContentCart.vue";
 import { declOfNum } from "@/utils/helper";
 import { declOfProduct } from "@/utils/constants";
 import { useOrderStore } from "@/stores/order";
 import { useCartStore } from "@/stores/cart";
-import ContentCart from "@/components/UI/ContentCart/ContentCart.vue";
-
 
 const orderStore = useOrderStore();
 const cartStore = useCartStore();
@@ -42,6 +41,12 @@ watch(() => form.value, (newVal, oldVal) => {
     newVal.pay !== '' &&
     true
 }, { deep: true });
+
+onBeforeMount(() => {
+  if (!cartStore.products.length) {
+    router.push({ name: 'cart'});
+  }
+})
 
 </script>
 

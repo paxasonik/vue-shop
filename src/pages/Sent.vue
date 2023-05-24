@@ -1,9 +1,21 @@
 <script setup lang="ts">
+import { onBeforeMount, onBeforeUnmount } from "vue";
+import { useRouter } from "vue-router";
 import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
-import { useOrderStore } from "@/stores/order";
 import ContentCart from "@/components/UI/ContentCart/ContentCart.vue";
+import { useOrderStore } from "@/stores/order";
 
 const orderStore = useOrderStore();
+const router = useRouter();
+
+onBeforeMount(() => {
+  if (!orderStore.products.length) {
+    router.push({ name: 'cart'});
+  }
+})
+onBeforeUnmount(() => {
+  orderStore.products = [];
+})
 </script>
 
 <template>

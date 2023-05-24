@@ -1,0 +1,15 @@
+.error__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "PressStart";
+  text-transform: uppercase;
+  text-align: center;
+
+  .error__title {
+    font-size: 30px;
+  }
+
+}

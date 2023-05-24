@@ -1,44 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// @ts-ignore
-import Main from '@/layouts/Main.vue';
-// @ts-ignore
-import Catalog from '@/pages/Catalog.vue';
-// @ts-ignore
-import Order from "@/pages/Order.vue";
-// @ts-ignore
-import Cart from "@/pages/Cart.vue";
-// @ts-ignore
-import Sent from "@/pages/Sent.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: Main,
+      component: () => import("@/layouts/Main.vue"),
       children: [
         {
           path: '/',
           name: 'catalog',
-          component: Catalog,
+          component: () => import("@/pages/Catalog.vue"),
         },
         {
           path: '/order',
           name: 'order',
-          component: Order,
+          component: () => import("@/pages/Order.vue"),
         },
         {
           path: '/cart',
           name: 'cart',
-          component: Cart,
+          component: () => import("@/pages/Cart.vue"),
         },
         {
           path: '/sent',
           name: 'sent',
-          component: Sent,
+          component: () => import("@/pages/Sent.vue"),
+        },
+        {
+          path: '/:pathMatch(.*)*',
+          name: "error-page",
+          component: () => import("@/pages/ErrorPage.vue"),
         },
       ]
-    }
+    },
   ]
 })
 
