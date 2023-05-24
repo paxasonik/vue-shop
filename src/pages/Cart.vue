@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Product from "@/components/Cart/Product/Product.vue";
 import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
-import {declOfNum} from "@/utils/helper";
-import {declOfProduct} from "@/utils/constants";
-import {useCartStore} from "@/stores/cart";
 import ContentCart from "@/components/UI/ContentCart/ContentCart.vue";
+import { declOfNum } from "@/utils/helper";
+import { declOfProduct } from "@/utils/constants";
+import { useCartStore } from "@/stores/cart";
 
 const cartStore = useCartStore();
 </script>

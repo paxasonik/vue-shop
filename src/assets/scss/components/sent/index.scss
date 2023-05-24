@@ -1,7 +1,6 @@
 .cart__message {
   margin: 0 0 50px;
-  font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: #000;
 }
 
@@ -9,9 +8,8 @@
   .dictionary__item {
     display: grid;
     grid-template-columns: 170px 1fr;
-    grid-gap: 20px;
-    font-size: 16px;
-    line-height: 24px;
+    gap: 20px;
+    line-height: 1.5;
 
     &:not(:last-child) {
       margin-bottom: 30px
@@ -20,6 +18,18 @@
     .dictionary__key {
       opacity: .6;
       font-weight: 300;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cart__message {
+    font-size: 14px;
+  }
+  .dictionary {
+    .dictionary__item {
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 14px;
     }
   }
 }

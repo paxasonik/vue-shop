@@ -3,22 +3,23 @@
 
   .footer__wrapper {
     display: grid;
-    grid-template-columns: 47% 36%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     padding-top: 60px;
     padding-bottom: 60px;
 
     .footer__links {
       display: grid;
-      grid-template-columns: repeat(3, auto);
-      grid-gap: 20px 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 30px;
+    }
+    @media screen and (max-width: 576px) {
+      .footer__links {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .footer__link {
       font-size: 14px;
-      line-height: 24px;
+      line-height: 1.7;
       color: #fff;
       border-bottom: 2px dashed transparent;
       -webkit-transition: all .2s ease;
@@ -34,25 +35,18 @@
     }
 
     .footer__desc {
-      margin: 30px 0 37px;
       font-size: 14px;
-      line-height: 24px;
+      line-height: 1.7;
       color: #9d9d9d;
     }
 
     .footer__social {
       margin-left: auto;
-      -ms-flex-item-align: start;
       align-self: flex-start;
 
       &.social {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         width: 100%;
       }
@@ -62,7 +56,6 @@
       }
 
       .social__link {
-        -webkit-transition: all .2s ease;
         transition: all .2s ease;
         color: #9eff00;
       }
@@ -73,7 +66,6 @@
     }
 
     .footer__copyright {
-      grid-row: 3/4;
       align-self: flex-end;
       font-family: "PressStart";
       font-size: 12px;
@@ -87,8 +79,32 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer__wrapper {
+    grid-template-columns: 47% 36%;
+    justify-content: space-between;
+
+    .footer__desc {
+      margin: 30px 0 37px;
+    }
+
+    .footer__copyright {
+      grid-row: 3/4;
+    }
+
+    .footer__data {
       grid-column: 2/3;
       grid-row: 3/4;
     }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer__wrapper {
+    gap: 20px;
   }
 }

@@ -4,18 +4,17 @@
 
 .cart__desc, .cart__price {
   margin: 0 0 15px;
-  font-size: 16px;
-  line-height: 22px
+  line-height: 1.4;
 }
 
 .cart__price {
   font-size: 30px;
-  line-height: 48px;
+  line-height: 1.6;
 
   span {
     font-weight: 500;
     font-size: 34px;
-    line-height: 48px
+    line-height: 1.4;
   }
 }
 

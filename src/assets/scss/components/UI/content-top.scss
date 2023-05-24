@@ -2,7 +2,6 @@
   margin-bottom: 35px;
 
   &.content__top--catalog {
-    margin-left: 310px;
     text-align: center;
   }
 
@@ -14,7 +13,7 @@
     margin: 10px 0;
     font-family: "PressStart";
     font-size: 25px;
-    line-height: 35px;
+    line-height: 1.4;
     text-transform: uppercase;
 
     span {
@@ -25,11 +24,25 @@
       color: #000
     }
   }
+  @media screen and (max-width: 991px) {
+    .content__title {
+      font-size: 20px;
+    }
+  }
 
   .content__info {
-    font-size: 16px;
     font-weight: 300;
     line-height: 1;
     color: #9d9d9d;
+  }
+  @media screen and (max-width: 991px) {
+    .content__info {
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .content__top {
+    margin-bottom: 20px;
   }
 }
