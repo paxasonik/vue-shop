@@ -1,5 +1,7 @@
 # vue-shop
 
+## [Open Vue-shop page](https://vue-shop-two-murex.vercel.app/)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
