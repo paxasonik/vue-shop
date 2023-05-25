@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { useRoute } from 'vue-router';
 
 const route: any = useRoute();
-const path = computed(() => route.name);
+const path = computed((): string => route.name);
 </script>
 
 <template>

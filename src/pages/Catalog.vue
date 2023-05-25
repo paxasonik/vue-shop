@@ -4,6 +4,7 @@ import Filter from "@/components/Catalog/Filter.vue";
 import Product from "@/components/Catalog/Product/Product.vue";
 import Pagination from "@/components/Catalog/Pagination/Pagination.vue";
 import ContentTop from "@/components/UI/ContentTop/ContentTop.vue";
+import type { IProduct } from "@/components/Catalog/Product";
 import { declOfNum } from "@/utils/helper";
 import { declOfProduct, pageOne, productsPerPage, maxDisplayedPages } from "@/utils/constants";
 import { useProductsStore } from "@/stores/products";
@@ -12,32 +13,32 @@ import { useFilterStore } from "@/stores/filter";
 const productsStore = useProductsStore();
 const filterStore = useFilterStore();
 
-const page = ref(pageOne);
+const page = ref<number>(pageOne);
 
-const filterProducts = computed(() => {
+const filterProducts = computed((): Array<IProduct> => {
   if (!filterStore.priceFrom && !filterStore.priceTo && !filterStore.categoryId && !filterStore.colorId) {
     return productsStore.products;
   } else {
-    let products = productsStore.products;
+    let products: Array<IProduct> = productsStore.products;
     if(filterStore.priceFrom > 0) {
-      products = Object.values(products).filter(product => product.price > filterStore.priceFrom);
+      products = Object.values(products).filter((product: IProduct) => product.price > filterStore.priceFrom);
     }
     if(filterStore.priceTo > 0) {
-      products = Object.values(products).filter(product => product.price < filterStore.priceTo);
+      products = Object.values(products).filter((product: IProduct) => product.price < filterStore.priceTo);
     }
     if(filterStore.categoryId) {
-      products = Object.values(products).filter(product => product.category === filterStore.categoryId);
+      products = Object.values(products).filter((product: IProduct) => product.category === filterStore.categoryId);
     }
     if(filterStore.colorId) {
-      products = Object.values(products).filter(item => {
-        return item.colors.some(color => color.id === filterStore.colorId);
+      products = Object.values(products).filter((item: IProduct) => {
+        return item.colors.some((color: IProduct) => color.id === filterStore.colorId);
       });
     }
     return products;
   }
 });
 
-const products = computed(() => {
+const products = computed((): Array<IProduct> => {
   const offset = (page.value - 1) * productsPerPage;
   return filterProducts.value.slice(offset, offset + productsPerPage)
 });

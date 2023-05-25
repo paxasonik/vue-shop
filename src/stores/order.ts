@@ -1,12 +1,15 @@
-import {computed, ref} from 'vue';
+import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import type { IProduct } from "@/components/Cart/Product";
+// @ts-ignore
+import type { Form } from "@/pages/Order.vue";
 
 
 export const useOrderStore = defineStore('order', () => {
-  const products = ref<Array<Record<string, unknown> | null>>([]);
-  const productsLength= ref(0);
-  const totalPrice = ref(0);
-  const form = ref({});
+  const products = ref<Array<IProduct>>([]);
+  const productsLength= ref<number>(0);
+  const totalPrice = ref<number>(0);
+  const form = ref<Form | null>(null);
 
   return {
     products,

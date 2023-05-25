@@ -5,7 +5,7 @@ import { Emit } from "@/utils/constants";
 
 const props = defineProps<CounterProps>();
 const emit = defineEmits<CounterEmit>();
-const count = ref(0);
+const count = ref<number>(0);
 
 watchEffect(() => (
   count.value = props.count

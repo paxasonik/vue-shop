@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, watchEffect } from "vue";
 import Counter from "@/components/UI/Counter/Counter.vue";
-import type { ProductProps } from "@/components/Cart/Product/index";
+import type { ProductProps } from "@/components/Cart/Product";
 import { useCartStore } from "@/stores/cart";
 
 const cartStore = useCartStore();
@@ -21,7 +21,7 @@ watch(count, (newVal, oldVal) => {
 <template>
   <li class="cart__item product">
     <div class="product__pic">
-      <img :src="props.product.imageUrl" :alt="props.product.title" class="catalog__pic" width="120" height="120">
+      <img :src="props.product.imageUrl" :alt="props.product.title" class="catalog__pic">
     </div>
     <h3 class="product__title">
       {{ props.product.title }}

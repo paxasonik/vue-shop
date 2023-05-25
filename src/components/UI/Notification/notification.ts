@@ -1,10 +1,12 @@
 import Toastify from "toastify-js";
-import { NotificationElement, NotificationProps } from "./Notification.vue";
+// @ts-ignore
+import type { NotificationElement, NotificationProps } from "@/components/UI/Notification/Notification.vue";
 
 const toastifyClass = "_" + Math.random().toString(36).substr(2, 9);
 
 const init = (el: NotificationElement, props: NotificationProps) => {
   el.showToast = () => {
+    // @ts-ignore
     const clonedEl = el.cloneNode(true) as NotificationElement;
     clonedEl.classList.remove("hidden");
     clonedEl.classList.add(toastifyClass);
@@ -16,12 +18,13 @@ const init = (el: NotificationElement, props: NotificationProps) => {
       position: "right",
       stopOnFocus: true,
       ...props.options,
+      // @ts-ignore
       node: clonedEl,
     });
     clonedEl.toastify.showToast();
     clonedEl
       .querySelectorAll("[data-dismiss='notification']")
-      .forEach(function (el) {
+      .forEach(function (el: any) {
         el.addEventListener("click", function () {
           clonedEl.toastify.hideToast();
         });
@@ -29,6 +32,7 @@ const init = (el: NotificationElement, props: NotificationProps) => {
 
     el.hideToast = () => {
       document.querySelectorAll(`.${toastifyClass}`).forEach(function (el) {
+        // @ts-ignore
         const toastifyEl = el as NotificationElement;
         toastifyEl.toastify.hideToast();
       });

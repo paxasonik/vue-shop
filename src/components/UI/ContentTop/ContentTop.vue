@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Breadcrumbs from "@/components/UI/Breadcrumbs.vue";
-import type {ContentTopProps} from "@/components/UI/ContentTop";
+import type { ContentTopProps } from "@/components/UI/ContentTop";
 
 const props = defineProps<ContentTopProps>();
 </script>

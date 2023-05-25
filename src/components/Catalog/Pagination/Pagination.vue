@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { PaginationProps, PaginationEmit } from "@/components/Catalog/Pagination";
+import type { PaginationProps, PaginationEmit } from "@/components/Catalog/Pagination";
 import { Emit, paginationDisabledClass, paginationCurrentClass, pageOne } from "@/utils/constants";
 
 const props = defineProps<PaginationProps>();
 const emit = defineEmits<PaginationEmit>();
 
-const totalPages = computed(() => Math.ceil(props.count / props.perPage));
+const totalPages = computed((): number => Math.ceil(props.count / props.perPage));
 
-const pages = computed(() => {
+const pages = computed((): Array<number> => {
   const halfDisplayed = Math.floor(props.maxDisplayedPages / 2);
   let startPage = Math.max(pageOne, props.page - halfDisplayed);
   const endPage = Math.min(totalPages.value, startPage + props.maxDisplayedPages - 1);

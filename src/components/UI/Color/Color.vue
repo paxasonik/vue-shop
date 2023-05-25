@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ColorProps, ColorEmit } from "@/components/UI/Color/index";
+import type { ColorProps, ColorEmit } from "@/components/UI/Color/index";
 import { Emit } from "@/utils/constants";
 
 const props = defineProps<ColorProps>();
 const emit = defineEmits<ColorEmit>();
 
-const updateInput = (event) =>  {
+const updateInput = (event: any) =>  {
   emit(Emit.UPDATE_VALUE, event.target.value)
 }
 </script>

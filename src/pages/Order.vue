@@ -13,8 +13,19 @@ const orderStore = useOrderStore();
 const cartStore = useCartStore();
 const router = useRouter();
 
-const isChangedForm = ref(false);
-const form = ref({
+export interface Form {
+  name: string;
+  address: string;
+  phone: string;
+  email: string;
+  comments: string;
+  delivery: number;
+  pay: string;
+  [key: string]: any;
+}
+
+const isChangedForm = ref<boolean>(false);
+const form = ref<Form>({
   name: '',
   address: '',
   phone: '',

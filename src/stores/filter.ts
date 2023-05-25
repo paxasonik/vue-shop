@@ -2,9 +2,22 @@ import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import axios from 'axios';
 
+interface Colors {
+  id: number;
+  title: string;
+  code: string;
+  [key: string]: any;
+}
+interface Categories {
+  id: number;
+  title: string;
+  [key: string]: any;
+}
+
 export const useFilterStore = defineStore('filter', () => {
-  const categories = ref<Array<Record<string, unknown> | null>>([]);
-  const colors = ref<Array<Record<string, unknown> | null>>([]);
+
+  const categories = ref<Array<Categories>>([]);
+  const colors = ref<Array<Colors>>([]);
   const priceFrom = ref<number>(0);
   const priceTo = ref<number>(0);
   const categoryId = ref<number>(0);

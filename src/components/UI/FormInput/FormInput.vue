@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { InputProps, InputEmit } from "@/components/UI/FormInput";
+import type { InputProps, InputEmit } from "@/components/UI/FormInput";
 import { Emit } from "@/utils/constants";
 import { vMaska } from 'maska';
 
 const props = defineProps<InputProps>();
 const emit = defineEmits<InputEmit>();
-const updateInput = (event) =>  {
+const updateInput = (event: any) =>  {
   emit(Emit.UPDATE_VALUE, event.target.value)
 }
 </script>

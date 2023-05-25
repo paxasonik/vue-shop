@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import Color from "@/components/UI/Color/Color.vue";
 import Counter from "@/components/UI/Counter/Counter.vue";
-import { ProductProps } from "@/components/Catalog/Product";
+import type { ProductProps, IProduct } from "@/components/Catalog/Product";
 import { callError, callSuccess } from "@/utils/helper";
 import { useCartStore } from "@/stores/cart";
 
@@ -10,8 +10,8 @@ const cartStore = useCartStore();
 
 const props = defineProps<ProductProps>();
 
-const colorId = ref('');
-const count = ref(1);
+const colorId = ref<string | number>('');
+const count = ref<number>(1);
 
 const addCart = () => {
   if (!colorId.value) {
@@ -23,7 +23,7 @@ const addCart = () => {
     return
   }
 
-  const product = cartStore.products.find(item => item.id === props.product.id && item.color.id === colorId.value)
+  const product = cartStore.products.find((item: IProduct) => item.id === props.product.id && item.color.id === colorId.value)
   if (product) {
     product.count += count.value;
     callSuccess("Товар добавлен в корзину");
@@ -34,7 +34,7 @@ const addCart = () => {
       price: props.product.price,
       imageUrl: props.product.imageUrl,
       count: count.value,
-      color: props.product.colors.find(item => item.id === colorId.value),
+      color: props.product.colors.find((item: IProduct) => item.id === colorId.value),
     })
     callSuccess("Товар добавлен в корзину");
   }

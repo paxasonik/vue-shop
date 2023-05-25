@@ -37,23 +37,23 @@ onBeforeUnmount(() => {
           <ul class="dictionary">
             <li class="dictionary__item">
               <span class="dictionary__key">Получатель</span>
-              <span class="dictionary__value">{{ orderStore.form.name }}</span>
+              <span class="dictionary__value">{{ orderStore.form?.name ? orderStore.form.name : '' }}</span>
             </li>
             <li class="dictionary__item">
               <span class="dictionary__key">Адрес доставки</span>
-              <span class="dictionary__value">{{ orderStore.form.address }}</span>
+              <span class="dictionary__value">{{ orderStore.form?.address ? orderStore.form.address : '' }}</span>
             </li>
             <li class="dictionary__item">
               <span class="dictionary__key">Телефон</span>
-              <span class="dictionary__value">{{ orderStore.form.phone }}</span>
+              <span class="dictionary__value">{{ orderStore.form?.phone ? orderStore.form.phone : '' }}</span>
             </li>
             <li class="dictionary__item">
               <span class="dictionary__key">Email</span>
-              <span class="dictionary__value">{{ orderStore.form.email }}</span>
+              <span class="dictionary__value">{{ orderStore.form?.email ? orderStore.form.email : '' }}</span>
             </li>
             <li class="dictionary__item">
               <span class="dictionary__key">Способ оплаты</span>
-              <span class="dictionary__value">{{ orderStore.form.pay === 'cart' ? 'Картой при получении' : 'Наличными при получении' }}</span>
+              <span class="dictionary__value">{{ orderStore.form?.pay === 'cart' ? 'Картой при получении' : 'Наличными при получении' }}</span>
             </li>
           </ul>
         </div>
@@ -67,8 +67,8 @@ onBeforeUnmount(() => {
         </ul>
 
         <div class="cart__total">
-          <p v-if="orderStore.form.delivery === 500">Доставка: <b>500 ₽</b></p>
-          <p>Итого: <b>{{ orderStore.productsLength }}</b> товара на сумму <b>{{ orderStore.form.delivery === 500 ? orderStore.totalPrice + orderStore.form.delivery : orderStore.totalPrice }} ₽</b></p>
+          <p v-if="orderStore.form?.delivery === 500">Доставка: <b>500 ₽</b></p>
+          <p>Итого: <b>{{ orderStore.productsLength }}</b> товара на сумму <b>{{ orderStore.form?.delivery === 500 ? orderStore.totalPrice + orderStore.form.delivery : orderStore.totalPrice }} ₽</b></p>
         </div>
       </template>
     </Content-cart>

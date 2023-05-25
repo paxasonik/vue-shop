@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { SelectProps, SelectEmit } from "@/components/UI/FormSelect";
+import type { SelectProps, SelectEmit } from "@/components/UI/FormSelect";
 import { Emit } from "@/utils/constants";
 
 const props = defineProps<SelectProps>();
 const emit = defineEmits<SelectEmit>();
-const changeOption = (event) =>  {
+const changeOption = (event: any) =>  {
   emit(Emit.UPDATE_VALUE, event.target.value)
 }
 </script>
