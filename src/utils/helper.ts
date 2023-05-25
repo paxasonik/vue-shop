@@ -39,8 +39,13 @@ const callError = (text: string) => {
   }).showToast();
 }
 
+const scrollTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 export {
   declOfNum,
   callSuccess,
   callError,
+  scrollTop,
 };

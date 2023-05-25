@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import type { PaginationProps, PaginationEmit } from "@/components/Catalog/Pagination";
+import { scrollTop } from "@/utils/helper";
 import { Emit, paginationDisabledClass, paginationCurrentClass, pageOne } from "@/utils/constants";
 
 const props = defineProps<PaginationProps>();
@@ -17,16 +18,20 @@ const pages = computed((): Array<number> => {
 });
 
 const changePage = (page: number) => {
-  emit(Emit.UPDATE_PAGE, page)
+  if (page === props.page) return
+  scrollTop();
+  emit(Emit.UPDATE_PAGE, page);
 };
 
 const prevPage = (page: number) => {
   if (page <= 1) return
+  scrollTop();
   emit(Emit.UPDATE_PAGE, props.page - 1)
 };
 
 const nextPage = (page: number) => {
   if (page >= totalPages.value) return
+  scrollTop();
   emit(Emit.UPDATE_PAGE, props.page + 1)
 }
 
