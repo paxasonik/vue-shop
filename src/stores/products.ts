@@ -8,7 +8,7 @@ export const useProductsStore = defineStore('products', () => {
   const productsLength = computed((): number => products.value.length);
 
   const getProducts = async () => {
-    await axios.get('/src/mock-data/products.json').then((res) => {
+    await axios.get('/mock-data/products.json').then((res) => {
       products.value = res.data.items
     });
   }

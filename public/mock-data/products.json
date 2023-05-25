@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Детский трюковой самокат Razor Grom",
-      "imageUrl": "/src/assets/images/catalog/detskiy-tryukovoy-samokat-razor-grom.jpg",
+      "imageUrl": "/images/catalog/detskiy-tryukovoy-samokat-razor-grom.jpg",
       "price": 4990,
       "category": 1,
       "colors": [
@@ -22,7 +22,7 @@
     {
       "id": 2,
       "title": "Электросамокат Xiaomi MiJia Electric Scooter Pro",
-      "imageUrl": "/src/assets/images/catalog/elektrosamokat-xiaomi-mijia-electric-scooter-pro.jpg",
+      "imageUrl": "/images/catalog/elektrosamokat-xiaomi-mijia-electric-scooter-pro.jpg",
       "price": 44999,
       "category": 1,
       "colors": [
@@ -46,7 +46,7 @@
     {
       "id": 3,
       "title": "Электросамокат NineBot ES1",
-      "imageUrl": "/src/assets/images/catalog/elektrosamokat-ninebot-es1.jpg",
+      "imageUrl": "/images/catalog/elektrosamokat-ninebot-es1.jpg",
       "price": 27999,
       "category": 1,
       "colors": [
@@ -65,7 +65,7 @@
     {
       "id": 4,
       "title": "Самокат Ridex Marvel 2.0 R",
-      "imageUrl": "/src/assets/images/catalog/samokat-ridex-marvel-2-0-r.jpg",
+      "imageUrl": "/images/catalog/samokat-ridex-marvel-2-0-r.jpg",
       "price": 5450,
       "category": 1,
       "colors": [
@@ -84,7 +84,7 @@
     {
       "id": 5,
       "title": "Радионяня Motorola MBP160",
-      "imageUrl": "/src/assets/images/catalog/radionyanya-motorola-mbp160.jpg",
+      "imageUrl": "/images/catalog/radionyanya-motorola-mbp160.jpg",
       "price": 3690,
       "category": 4,
       "colors": [
@@ -103,7 +103,7 @@
     {
       "id": 6,
       "title": "Ультразвуковая зубная щётка Playbrush Smart Sonic",
-      "imageUrl": "/src/assets/images/catalog/ultrazvukovaya-zubnaya-shchetka-playbrush-smart-sonic.jpg",
+      "imageUrl": "/images/catalog/ultrazvukovaya-zubnaya-shchetka-playbrush-smart-sonic.jpg",
       "price": 5660,
       "category": 4,
       "colors": [
@@ -122,7 +122,7 @@
     {
       "id": 7,
       "title": "Смартфон Xiaomi Mi A3 4/64GB Android One",
-      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-mi-a3-4-64gb-android-one.png",
+      "imageUrl": "/images/catalog/smartfon-xiaomi-mi-a3-4-64gb-android-one.png",
       "price": 14960,
       "category": 3,
       "colors": [
@@ -141,7 +141,7 @@
     {
       "id": 8,
       "title": "Смартфон Xiaomi Redmi 6/128GB",
-      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-redmi-6-128gb.jpg",
+      "imageUrl": "/images/catalog/smartfon-xiaomi-redmi-6-128gb.jpg",
       "price": 8960,
       "category": 3,
       "colors": [
@@ -160,7 +160,7 @@
     {
       "id": 9,
       "title": "Гироскутер Razor Hovertrax 2.0",
-      "imageUrl": "/src/assets/images/catalog/giroskuter-razor-hovertrax-2-0.jpg",
+      "imageUrl": "/images/catalog/giroskuter-razor-hovertrax-2-0.jpg",
       "price": 3490,
       "category": 6,
       "colors": [
@@ -174,7 +174,7 @@
     {
       "id": 10,
       "title": "Электроскейт Razor Cruiser",
-      "imageUrl": "/src/assets/images/catalog/elektroskeyt-razor-cruiser.jpg",
+      "imageUrl": "/images/catalog/elektroskeyt-razor-cruiser.jpg",
       "price": 24690,
       "category": 6,
       "colors": [
@@ -193,7 +193,7 @@
     {
       "id": 11,
       "title": "Роллерсёрф Razor RipStik Air Pro",
-      "imageUrl": "/src/assets/images/catalog/rollerserf-razor-ripstik-air-pro.jpg",
+      "imageUrl": "/images/catalog/rollerserf-razor-ripstik-air-pro.jpg",
       "price": 6690,
       "category": 6,
       "colors": [
@@ -222,7 +222,7 @@
     {
       "id": 12,
       "title": "Наушники AirPods 2",
-      "imageUrl": "/src/assets/images/catalog/naushniki-airpods-2.jpg",
+      "imageUrl": "/images/catalog/naushniki-airpods-2.jpg",
       "price": 16560,
       "category": 5,
       "colors": [
@@ -236,7 +236,7 @@
     {
       "id": 13,
       "title": "Смартфон Xiaomi Mi Mix 3 6/128GB",
-      "imageUrl": "/src/assets/images/catalog/smartfon-xiaomi-mi-mix-3-6-128gb.jpg",
+      "imageUrl": "/images/catalog/smartfon-xiaomi-mi-mix-3-6-128gb.jpg",
       "price": 21790,
       "category": 3,
       "colors": [
@@ -250,7 +250,7 @@
     {
       "id": 14,
       "title": "Часы Apple Watch Series 5",
-      "imageUrl": "/src/assets/images/catalog/chasy-apple-watch-series-5.jpg",
+      "imageUrl": "//images/catalog/chasy-apple-watch-series-5.jpg",
       "price": 33990,
       "category": 4,
       "colors": [
@@ -264,7 +264,7 @@
     {
       "id": 15,
       "title": "Фитнес браслет Xiaomi Mi Band 4 NFC",
-      "imageUrl": "/src/assets/images/catalog/fitnes-braslet-xiaomi-mi-band-4-nfc.jpg",
+      "imageUrl": "/images/catalog/fitnes-braslet-xiaomi-mi-band-4-nfc.jpg",
       "price": 3990,
       "category": 4,
       "colors": [
@@ -278,7 +278,7 @@
     {
       "id": 16,
       "title": "Наушники Marshall Major II",
-      "imageUrl": "/src/assets/images/catalog/naushniki-marshall-major-ii.jpg",
+      "imageUrl": "/images/catalog/naushniki-marshall-major-ii.jpg",
       "price": 4990,
       "category": 5,
       "colors": [
@@ -292,7 +292,7 @@
     {
       "id": 17,
       "title": "Наушники JBL TUNE 220TWS",
-      "imageUrl": "/src/assets/images/catalog/naushniki-jbl-tune-220tws.jpg",
+      "imageUrl": "/images/catalog/naushniki-jbl-tune-220tws.jpg",
       "price": 5990,
       "category": 5,
       "colors": [
@@ -311,7 +311,7 @@
     {
       "id": 18,
       "title": "Электровелосипед Eltreco TT Max",
-      "imageUrl": "/src/assets/images/catalog/elektrovelosiped-eltreco-tt-max.jpg",
+      "imageUrl": "/images/catalog/elektrovelosiped-eltreco-tt-max.jpg",
       "price": 88920,
       "category": 2,
       "colors": [
@@ -325,7 +325,7 @@
     {
       "id": 19,
       "title": "Квадрокоптер DJI Spark Fly More Combo",
-      "imageUrl": "/src/assets/images/catalog/kvadrokopter-dji-spark-fly-more-combo.jpg",
+      "imageUrl": "/images/catalog/kvadrokopter-dji-spark-fly-more-combo.jpg",
       "price": 38385,
       "category": 7,
       "colors": [
@@ -349,7 +349,7 @@
     {
       "id": 20,
       "title": "Квадрокоптер Xiaomi Mi Drone Mini",
-      "imageUrl": "/src/assets/images/catalog/kvadrokopter-xiaomi-mi-drone-mini.jpg",
+      "imageUrl": "/images/catalog/kvadrokopter-xiaomi-mi-drone-mini.jpg",
       "price": 5990,
       "category": 7,
       "colors": [
@@ -368,7 +368,7 @@
     {
       "id": 21,
       "title": "Квадрокоптер DJI Mavic 2 Zoom",
-      "imageUrl": "/src/assets/images/catalog/kvadrokopter-dji-mavic-2-zoom.jpg",
+      "imageUrl": "/images/catalog/kvadrokopter-dji-mavic-2-zoom.jpg",
       "price": 111990,
       "category": 7,
       "colors": [

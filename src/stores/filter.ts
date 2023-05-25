@@ -24,13 +24,13 @@ export const useFilterStore = defineStore('filter', () => {
   const colorId = ref<number>(0);
 
   const getCategories = async () => {
-    await axios.get('/src/mock-data/categories-filter.json').then((res) => {
+    await axios.get('/mock-data/categories-filter.json').then((res) => {
       categories.value = res.data.items
     });
   };
 
   const getColors = async () => {
-    await axios.get('/src/mock-data/colors-filter.json').then((res) => {
+    await axios.get('/mock-data/colors-filter.json').then((res) => {
       colors.value = res.data.items
     });
   };
